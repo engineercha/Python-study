@@ -18,7 +18,7 @@
 
 ## 크롤링
 0.고소한 크롤링
-- [x] [크롤링 소개]()
+- [x] [크롤링 소개](https://cafe.naver.com/codeuniv?iframe_url_utf8=%2FArticleRead.nhn%3FreferrerAllArticles%3Dfalse%26menuid%3D136%26page%3D1%26boardtype%3DL%26clubid%3D30026525%26articleid%3D10788)
 - [x] 크롤링의 종류
 - [x] 라이브러리와 크롤링 준비
 - [ ] HTML 구조
