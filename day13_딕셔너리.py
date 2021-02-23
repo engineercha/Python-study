@@ -21,3 +21,12 @@ print()
 print(ex_dic.keys())
 print("before:",ex_dic.values())  #dict_values([]) 형식으로 출력됨
 print("after :",list(ex_dic.values()))
+
+
+#오늘의 문제
+my_tuple=("Jan 21","is","her birthday")
+my_dict={}
+
+for i in range(len(my_tuple)):
+    my_dict[my_tuple[i]] = len(my_tuple[i])
+print(my_dict)
