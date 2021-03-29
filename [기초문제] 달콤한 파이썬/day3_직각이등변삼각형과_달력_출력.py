@@ -19,6 +19,6 @@ for i in range(0,32,7):             #주: 0, 7, 14, 21, 28
 #ver2
 print('---------------------------------------------------')
 for i in range(0,32):
-    if i==0: print('\t',end=''); continue
+    if i==0: print('\t',end=''); continue   #i==0이면 loop의 다음 순번으로 이동
     elif i%7==0: print()
-    print(f'{i}',end='\t')          #i==0를 제외한 모든 경우에 실행됨
+    print(f'{i}',end='\t')          #i==0를 제외한 모든 경우에 i 출력

@@ -9,12 +9,12 @@ from selenium.webdriver.common.keys import Keys
 s=requests.Session()
 
 login_data={
-    'usr': '학번',
-    'pwd' : '비번'
+    'usr': '2070081',
+    'pwd' : 'Sss3778608'
 }
 
-usr="학번"
-pwd="비번"
+usr="2070081"
+pwd="Sss3778608"
 
 main_url=('https://cyber.ewha.ac.kr/')
 log_url=('https://sso.ewha.ac.kr/SSO_IDP/swift/sso/loginForm.jsp?RSP=cyber.ewha.ac.kr&RelayState=%2FmakeSsoToken_php.jsp%3FretURL%3D%252F')
@@ -64,13 +64,16 @@ print(links)
 #for i in links:
 driver.get(links[0])
 completion=driver.find_element_by_css_selector('ul.topmenu>li>ul>li>a')
-# link=[i.get_attribute('href') for i in completion]
+link=[i.get_attribute('href') for i in completion]
 print(completion, type(completion)
 
+res=requests.get(links[0])
+soup=bs(res.text, 'html.parser')
+completion=soup.find(attrs={'title':'학습진도현황'})
+print(completion)
+
 driver.find_element_by_xpath('//*[@id="coursemos-course-menu"]/ul/li[1]/div/div[2]/ul/li[2]/ul/li[1]/a').click()
-# res=requests.get(links[0])
-# soup=bs(res.text, 'html.parser')
-# print(soup.find_all('a', {'title':'학습진도현황'}))
+print(soup.find_all('a', {'title':'학습진도현황'}))
 
 send_data(log_url,login_data)
 check_login(main_url)
